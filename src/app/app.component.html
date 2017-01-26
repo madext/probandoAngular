@@ -1,3 +1,8 @@
-<h1>
-  {{title}}
-</h1>
+<h1>{{titulo}}</h1>
+
+
+<ul class="heroes">
+ <li *ngFor="let ente of entes">
+  <span class="badge">{{ente.id}}</span> {{ente.nombre}}
+</li>
+</ul>

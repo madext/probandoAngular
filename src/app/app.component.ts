@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ENTES } from './datos-ente'
+import { Ente } from './ente'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
-}
+  titulo: string = 'Entes'; // variable titulo de la web
+  entes: Ente[] = ENTES; // Inicializa datos desde la constante ENTES
+  };
+
+  
+
+
