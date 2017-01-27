@@ -5,19 +5,22 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { EnteDetalleComponent } from './ente-detalle/ente-detalle.component';
+import { EntesComponent } from './entes/entes.component';
+import { EnteService } from './ente-service/ente.service'
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    EnteDetalleComponent
+    EnteDetalleComponent,
+    EntesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [EnteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
