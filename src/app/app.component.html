@@ -8,12 +8,12 @@
   <span class="badge">{{ente.id}}</span> {{ente.nombre}}
 </li>
 </ul>
-
-<div *ngIf="enteSeleccionado">
+ <app-ente-detalle [ente]="enteSeleccionado"></app-ente-detalle>
+<!-- <div *ngIf="enteSeleccionado">
 <h2>Detalles del ente: {{enteSeleccionado.nombre}} </h2>
 	<div><label>id: </label>{{enteSeleccionado.id}}</div>
 	<div>
 	    <label>nombre: </label>
 	    <input [(ngModel)]="enteSeleccionado.nombre" placeholder="nombre"/>
 	</div>
-</div>
+</div> -->

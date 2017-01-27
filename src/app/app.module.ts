@@ -4,11 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { EnteDetalleComponent } from './ente-detalle/ente-detalle.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EnteDetalleComponent
   ],
   imports: [
     BrowserModule,
