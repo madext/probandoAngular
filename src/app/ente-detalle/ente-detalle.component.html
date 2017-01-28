@@ -1,7 +1,9 @@
 
   <div *ngIf="ente">
 <h2>Detalles del ente: {{ente.nombre}} </h2>
-	<div><label>id: </label>{{ente.id}}</div>
+	<div>
+		<label>id: </label>{{ente.id}}
+	</div>
 	<div>
 	    <label>nombre: </label>
 	    <input [(ngModel)]="ente.nombre" placeholder="nombre"/>

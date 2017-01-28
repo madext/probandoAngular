@@ -7,8 +7,7 @@ import { Ente } from '../ente-service/ente'
   styleUrls: ['./ente-detalle.component.css']
 })
 export class EnteDetalleComponent implements OnInit {
-  @Input()
-  ente: Ente;
+  @Input() ente: Ente;
   constructor() { }
 
   ngOnInit() {

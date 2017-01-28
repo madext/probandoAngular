@@ -11,9 +11,11 @@ import { EnteService } from './ente-service/ente.service';
 import { PanelComponent } from './panel/panel.component'
 
 const appRoutes: Routes = [
-  { path: 'ente', component: EntesComponent },
+  { path: 'entes', component: EntesComponent },
+  { path: 'panel', component: PanelComponent },
+  { path: 'detalle/:id', component: EnteDetalleComponent }, 
   { path: '',
-    redirectTo: '/ente',
+    redirectTo: '/panel',
     pathMatch: 'full'
   },
 
