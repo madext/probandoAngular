@@ -5,9 +5,13 @@ import { ENTES } from './datos-ente'
 @Injectable()
 export class EnteService {
   
-  constructor() { }
 	 leerEntes(): Promise<Ente[]> {
 	  	return Promise.resolve(ENTES);
 	 }
+
+	 leerEnte(id: number): Promise<Ente> {
+        return this.leerEntes()
+               .then(ente => ENTES.find(ente => ente.id === id));
+     }
 }
 

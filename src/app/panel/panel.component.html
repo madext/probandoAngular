@@ -1,6 +1,6 @@
     <h3>Selección de Entes</h3>
     <div class="grid grid-pad">
-      <div *ngFor="let ente of entes" class="col-1-4">
+      <div *ngFor="let ente of entes" [routerLink]="['/detalle', ente.id]" class="col-1-4">
         <div class="module hero">
           <h4>{{ente.nombre}}</h4>
         </div>
