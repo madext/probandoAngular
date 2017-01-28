@@ -1,3 +1,5 @@
+<h1>{{titulo}}</h1>
+<h2>Mis entes</h2>
 <ul class="heroes">
  <li *ngFor="let ente of entes"
   [class.selected]="ente === enteSeleccionado"
@@ -5,4 +7,9 @@
   <span class="badge">{{ente.id}}</span> {{ente.nombre}}
 </li>
 </ul>
- <app-ente-detalle></app-ente-detalle>
+<div *ngIf="enteSeleccionado">
+  <h2>
+    {{enteSeleccionado.nombre | uppercase}} es el ente.
+  </h2>
+  <button (click)="irDetalle()">Ver detalle</button>
+</div>

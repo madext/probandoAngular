@@ -2,24 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { RouterModule, Routes } from '@angular/router';
+import { AppRoutingModule }     from './app-routing.module';
 
 import { AppComponent } from './app.component';
 import { EnteDetalleComponent } from './ente-detalle/ente-detalle.component';
 import { EntesComponent } from './entes/entes.component';
 import { EnteService } from './ente-service/ente.service';
 import { PanelComponent } from './panel/panel.component'
-
-const appRoutes: Routes = [
-  { path: 'entes', component: EntesComponent },
-  { path: 'panel', component: PanelComponent },
-  { path: 'detalle/:id', component: EnteDetalleComponent }, 
-  { path: '',
-    redirectTo: '/panel',
-    pathMatch: 'full'
-  },
-
-];
 
 
 @NgModule({
@@ -30,7 +19,7 @@ const appRoutes: Routes = [
     PanelComponent
   ],
   imports: [
-    RouterModule.forRoot(appRoutes),
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
     HttpModule
